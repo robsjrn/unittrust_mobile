@@ -1,0 +1,37 @@
+<ion-view view-title="Profile">
+<div class="bar bar-header bar-calm-900">
+  <h1 class="title">Account Feedbacks</h1>
+</div>
+
+<div class="bar bar-subheader bar-assertive">
+   <h2 class="title"><i class="icon ion-email"></i> Feedbacks</h2>
+    
+</div>
+    <ion-content class="padding has-subheader" ng-class="{expanded:$scope.isExpanded}">
+    <button id="fab-mesages" ng-click="composemessage()" class="button button-fab button-fab-bottom-left button-royal-900"><i class="icon ion-plus"></i></button>
+
+    <ion-refresher
+    pulling-text="Pull to refresh..."
+    on-refresh="doRefresh()">
+  </ion-refresher>
+
+  
+      <p><small>The Mark  Means Your Messages has Been Responded To. (Double tap View the Response )</small></p>       
+        
+        
+        <ion-list>
+            <ion-item  class="item item-avatar item-icon-right" ng-repeat="feedback in feedbacks | orderBy:'id' ">
+              <div on-double-tap="viewResponse(feedback)"> 
+                <h2>{{feedback.subject}} </h2>
+                <p>{{feedback.description}}</p>
+                <p>{{feedback.submissionDate | date:"dd/MM/yyyy" }}</p>
+                <i ng-if="feedback.respondedTo==1" class="icon ion-checkmark-round muted"></i>
+                <i ng-if="feedback.respondedTo!=1" class="icon ion-close-round muted"></i>
+
+                <ion-option-button ng-if="feedback.respondedTo==1" class = "button-assertive" ng-click="viewResponse(feedback)">View Response </ion-option-button>
+              </div>
+            <ion-item
+           
+        </ion-list>
+    </ion-content>
+</ion-view>

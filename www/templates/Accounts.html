@@ -1,0 +1,44 @@
+<ion-view view-title="Account Inquiry" >
+<div class="bar bar-header bar-calm-900">
+  <h1 class="title">Accounts Inquiry</h1>
+</div>
+  <ion-content>
+     <ion-refresher
+    pulling-text="Pull to refresh..."
+    on-refresh="doRefresh()">
+  </ion-refresher>
+
+    <ion-list ng-controller="AccountCtrl"
+               can-swipe=true  >
+
+             
+                <p><small>Double tap to Peform an Action on the Account</small></p>  
+  <ion-item ng-repeat="account in memberaccounts">
+
+       <div class="item card-item padding-left" on-double-tap="onDoubleTap(account)">
+            <div class="card stable-bg ink ink-dark">
+                <div class="item item-avatar item-text-wrap padding-left">
+                   
+                    <strong><b>{{account.ACCOUNT_NO}} </b></strong> 
+
+                    <p>  {{account.DESCRIPT}}</p>
+
+                    
+                         
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+     
+      <ion-option-button class="button-positive"
+                       ng-click="statementDownload(account.ACCOUNT_NO,account.SECURITY_CODE)">
+      Download Statement
+    </ion-option-button>
+  </ion-item>
+
+  
+</ion-list>
+
+   </ion-content>
+</ion-view> 

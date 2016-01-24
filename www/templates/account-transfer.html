@@ -1,0 +1,52 @@
+<ion-view view-title="Account Transfers" >
+<div class="bar bar-header bar-calm-900">
+  <button class="button-clear icon-left ion-back" ng-click="GoBack()">Back </button>
+  <h1 class="title">Account Transfer</h1>
+</div>
+  <ion-content>
+
+  <div class="card">
+
+    <div class="item item-divider">
+       <span class=" icon ion-arrow-swap pull-right">Account Transfer</span>
+  </div>
+
+     
+  <div class="item ">
+  
+     <div class="list">
+  <label class="item item-input item-stacked-label">
+    <span class="input-label" >From Account</span>
+    <input type="text" ng-model="data.fromaccount" ng-disabled=true >
+  </label>
+
+        <div class="item item-input item-select">
+            <div class="input-label">
+              To Account 
+            </div>
+            <select  ng-model="data.toaccount" name ="idtype" required
+            ng-options="accountto.ACCOUNT_NO for accountto in memberaccounts"
+            >
+              <option value="" ng-selected="selected">Select Account</option> 
+            </select>
+          </div>
+
+
+
+  <label class="item item-input item-stacked-label">
+    <span class="input-label" class="inpt">Amount</span>
+    <input type="number" placeholder="Amount" ng-model="data.amount">
+  </label>
+</div>
+  </div>
+
+   
+    <div class="row">
+    <button class="button button-block button-assertive" ng-click="transfertransaction(data)">
+      Submit
+      </button>
+   
+  </div>
+</div>
+   </ion-content>
+</ion-view> 

@@ -1,0 +1,121 @@
+<ion-view view-title="Registration">
+
+<div class="bar bar-header bar-calm-900">
+  <h1 class="title">Registration</h1>
+   <a class="button button-clear button-icon icon ion-home" href="#/app"></a>
+</div>
+  <ion-content>
+
+  <div class="row">
+  	 <div class="col">
+   <ion-card>
+
+  <ion-card-header>
+   
+  </ion-card-header>
+
+  <ion-card-content>
+      <form name="registrationForm" novalidate="" > 
+         
+      <div class="list">
+           
+          <div class="item item-input item-select">
+				    <div class="input-label">
+				      Identity Type
+				    </div>
+				    <select  ng-model="authorization.idtype" name ="idtype" required>
+				      <option value =1 selected>ID Number</option>
+				      <option value =2 >Passport</option>
+				      <option value=3 >Alien Id</option>
+				    </select>
+				  </div>
+
+          <span class="form-error" ng-show="registrationForm.idtype.$error.required"> <i class="icon ion-alert-circled info"> Select Identity Type </i></span>
+
+                     
+
+                 <div class="item item-input-inset">
+                    <label class="item item-input item-md-label" ng-class="{ 'has-errors' : registrationForm.idnum.$invalid && registrationForm.$submitted, 'no-errors' : registrationForm.idnum.$valid  && registrationForm.$submitted}">   
+                    <input type="text" class="md-input" name="idnum" placeholder="Id Number " ng-model="authorization.idnumber" ng-minlength="5" ng-maxlength="20" required>
+                    </label>
+                   
+                 </div>
+
+
+
+             <div class="form-errors" ng-messages="registrationForm.idnum.$error" >
+                <div ng-messages-include="templates/form-errors.html"></div>
+                <div class="form-error" ng-message="maxlength"><i class="icon ion-alert-circled error"> This field must be More than 5 Characters </i></div>
+              </div>
+
+             
+             
+ 
+
+
+            <div class="item item-input-inset">
+                  <label class="item item-input item-md-label"  ng-class="{ 'has-errors' : registrationForm.phone.$invalid && !registrationForm.phone.$pristine, 'no-errors' : registrationForm.phone.$valid  && registrationForm.$submitted}"> <input type="text" name="phone" placeholder="Phone Number " ng-model="authorization.phonenumber" ng-minlength="5" ng-maxlength="20" required >
+                    </label>
+                   
+                 </div>
+
+
+
+
+              <div class="form-errors" ng-messages="registrationForm.phone.$error" >
+                <div ng-messages-include="templates/form-errors.html"></div>
+                <div class="form-error" ng-message="maxlength"><i class="icon ion-alert-circled error"> This field must be More than 5 Characters </i></div>
+              </div>
+
+
+             
+                <div class="item item-input-inset">
+                  <label class="item item-input item-md-label" ng-class="{ 'has-errors' : registrationForm.email.$error, 'no-errors' : registrationForm.email.$valid  && registrationForm.$submitted}"> <input type="email" name="email" placeholder="Email " ng-model="authorization.email" required >
+                    </label>   
+                 </div>
+
+                 <div ng-show="registrationForm.email.$invalid && !registrationForm.email.$pristine" class="form-errors error">Enter a valid email.</div>
+                <div class="form-errors" ng-messages="registrationForm.email.$error" >
+                     <div ng-messages-include="templates/form-errors.html"></div>
+               
+              </div>
+             
+           
+         </div>  
+         
+             
+        </form>   
+  </ion-card-content>
+
+  </ion-card>  
+</div>
+</div>
+
+<div class="row">
+	<div class="col col-50">
+		<button class="button button-full button-positive" ng-click="registerCustomer(authorization)" ng-disabled="registrationForm.$invalid">
+            Submit
+          </button>
+     </div>	
+     
+     <div class="col col-50">
+
+          <button class="button button-full button-positive" type="submit">
+            Cancel
+          </button>
+     </div>		
+
+</div>
+
+  </ion-content>
+</ion-view>
+
+
+
+
+
+
+
+  
+
+

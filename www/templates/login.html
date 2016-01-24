@@ -1,0 +1,37 @@
+
+<ion-view view-title="Login" align-title="left">
+<div class="bar bar-header bar-calm-900">
+  <h1 class="title">Login</h1>
+</div>
+
+  <ion-content style="background: url(img/login2.jpg) center; background-size: cover;">
+  <div class="hero no-header flat">
+            <div class="content">
+                <div class="app-icon"></div>
+                <h1><b>UnitTrust</b></h1>
+                <ion-spinner ng-show ="showloading" class="spinner-energized" icon="spiral"></ion-spinner>
+            </div>
+        </div>
+    <div class="list">
+
+      
+       <label class="item item-input item-md-label" placeholder="Username" highlight-color="balanced" type="text">
+        <input type="text" class="md-input"  ng-model="user.username">
+        <span class="input-label">Username</span><div class="hightlight hightlight-calm"></div>
+      </label>
+
+     
+
+      <label class="item item-input item-md-label" placeholder="Password" highlight-color="energized" type="password">
+        <input type="password" class="md-input" ng-model="user.password">
+        <span class="input-label">Password</span><div class="hightlight hightlight-calm"></div>
+      </label>
+     
+    </div>
+    <button class="button button-full button-balanced" ng-click="login(user)">
+      Login 
+    </button>
+     <button class="button button-positive button-clear button-full error" ui-sref="app.forgotpassword">Forgot Password </button>
+    <button class="button button-positive button-clear button-full" ui-sref="app.register">Register now!</button>
+  </ion-content>
+</ion-view>

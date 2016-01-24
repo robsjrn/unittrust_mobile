@@ -1,0 +1,44 @@
+
+
+<ion-view title="Account">
+<ion-nav-view name="fabContent"></ion-nav-view>
+    <ion-pane>
+      
+      <ion-tabs class="tabs-positive tabs-icon-only">
+        <ion-tab title="Profile" icon="ion-ios-person" ui-sref="app.account.profile">
+          <ion-nav-view name="profile-tab"></ion-nav-view>
+        </ion-tab>
+
+        <ion-tab title="Balance Inquiry" icon="ion-ios-briefcase" ui-sref="app.account.viewaccounts">
+          <ion-nav-view name="accounts-tab"></ion-nav-view>
+        </ion-tab>
+
+         <ion-tab title="Balance Inquiry" hidden=true icon="ion-ios-briefcase" ui-sref="app.account.ministatement">
+          <ion-nav-view name="ministatement-tab"></ion-nav-view>
+        </ion-tab>
+
+        <ion-tab title="View Pdf" hidden=true icon="ion-ios-briefcase" ui-sref="app.account.viewpdf">
+          <ion-nav-view name="viewpdf-tab"></ion-nav-view>
+        </ion-tab>
+
+         <ion-tab title="Transfer" hidden=true icon="ion-ios-briefcase" ui-sref="app.account.transfer">
+          <ion-nav-view name="transfer-tab"></ion-nav-view>
+        </ion-tab>
+
+
+        <ion-tab title="Agents" icon="ion-person-stalker" ui-sref="app.account.accountagent">
+          <ion-nav-view name="accountagent-tab"></ion-nav-view>
+        </ion-tab>
+
+        <ion-tab title="Message" icon="ion-email" ui-sref="app.account.messages">
+          <ion-nav-view name="messages-tab"></ion-nav-view>
+        </ion-tab>
+
+         <ion-tab title="Logout" icon="ion-more" ng-click="openPopover($event)">
+         
+        </ion-tab>
+
+      </ion-tabs>
+      
+    </ion-pane>
+  </ion-view>

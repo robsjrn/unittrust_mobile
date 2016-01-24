@@ -1,0 +1,72 @@
+<ion-view view-title="Welcome {{username}}" >
+<div class="bar bar-header bar-calm-900">
+  <h1 class="title">Profile</h1>
+</div>
+<div class="bar bar-subheader">
+  <h2 class="title">Welcome {{profile.title}} {{profile.allnames}}</h2>
+</div>
+  <ion-content>
+  <ion-refresher
+    pulling-text="Pull to refresh..."
+    on-refresh="doRefresh()">
+  </ion-refresher>
+  
+      <div class="item card-item">
+            <div ui-sref="app.profile" class="card stable-bg ink ink-dark">
+                <div class="item item-divider">
+                    Basic Details
+                  </div>
+                <div class="item  item-text-wrap">
+                   
+                    <p class="text-capitalize">MEMBER NO.   : {{profile.memberNo}}</p>
+                     <p class="text-capitalize"> NAMES   : {{profile.title}} {{profile.allnames}}</p>
+                     <p class="text-capitalize">ID/PASSPORT  : {{profile.idNo}}</p>
+                     <p class="text-capitalize">PIN NUMBER  : {{profile.pinNo}}</p>
+                     <p class="text-capitalize">CATEGORY  : {{profile.hseNo}}</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="item card-item">
+            <div ui-sref="app.profile" class="card stable-bg ink ink-dark">
+                <div class="item item-divider">
+                    Contact Details
+                  </div>
+                <div class="item  item-text-wrap">
+                   
+                   <p class="text-capitalize">POSTAL ADDRESS  : {{profile.postAddress}}</p>
+                    <p class="text-capitalize">TELEPHONE NUMBER  : {{profile.telNo}}</p>
+                    <p class="text-capitalize">MOBILE NUMBER  : {{profile.gsmNo}}</p>
+                    <p class="text-capitalize">EMAIL  : {{profile.eMail}}</p>
+                    
+                    <p class="text-capitalize">TOWN : {{profile.town}}</p>
+                    <p class="text-capitalize">PHYSICAL ADDRESS : {{profile.physAddress}}</p>
+                </div>
+            </div>
+        </div>
+
+
+
+         <div class="item card-item">
+            <div ui-sref="app.profile" class="card stable-bg ink ink-dark">
+                <div class="item item-divider">
+                    Bank Details
+                  </div>
+                <div class="item  item-text-wrap">
+                   
+                      <p class="text-capitalize">BANK NAME  : {{bankdetails.bankname}}</p>
+                      <p class="text-capitalize">BRANCH     : {{bankdetails.branch}}</p>
+                      <p class="text-capitalize">ACCOUNT NAME   : {{bankdetails.accountname}}</p>
+                      <p class="text-capitalize">ACCOUNT NUMBER  : {{bankdetails.accountno}}</p>
+                      
+                      <p class="text-capitalize">ACCOUNT TYPE  : {{bankdetails.accounttype}}</p>
+                      <p class="text-capitalize">ACCOUNT TOWN  : {{bankdetails.town}}</p>
+                </div>
+            </div>
+        </div>
+
+
+
+   </ion-content>
+</ion-view> 

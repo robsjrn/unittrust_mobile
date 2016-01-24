@@ -1,0 +1,143 @@
+<ion-view view-title="Thank You " >
+<div class="bar bar-header bar-assertive">
+  <h1 class="title">Payment Option </h1>
+   <a class="button button-clear button-icon icon ion-home" href="#/app"></a>
+</div>
+  <ion-content>
+
+   <div class="card">
+
+   	    <div class="item">
+
+   	    	
+                <p>Kindly Choose Your Payment Options </p>
+				   
+					       <div class="list">
+
+					   <label class="item item-radio">
+					      <input type="radio" name="group1"  ng-model="content" value="mpesa">
+					      <div class="item-content">
+					         Mpesa
+					      </div>
+					      <i class="radio-icon ion-checkmark"></i>
+					   </label>
+
+					   <label class="item item-radio">
+					      <input type="radio" name="group1" ng-model="content" value="airtelmoney" >
+					      <div class="item-content">
+					         Airtel Money
+					      </div>
+					      <i class="radio-icon ion-checkmark"></i>
+					   </label>
+
+					   <label class="item item-radio" >
+					      <input type="radio" name="group1" ng-model="content" value="bank">
+					      <div class="item-content">
+					         Bank Account
+					      </div>
+					      <i class="radio-icon ion-checkmark"></i>
+					   </label>
+
+					  
+
+					</div>
+					  
+              </div>
+          </div>    
+
+
+
+   <div class="card">
+
+   	   
+
+                       <div class="item item-text-wrap" ng-show="content == 'mpesa'">
+                       	
+                       <p >You can  Fund your Account By sending Money to Our  Mpesa Paybill 888111 Stating your account Number You Received </p>
+                       	<p> OR </p>
+                       	<p>Fill in the Details Belows <p></h5></p>
+		             	 <div class="list">
+							   <div class="item item-input-inset">
+							      <label class="item item-input-wrapper">		
+							      <input type="text" placeholder="Phonenumber">
+							      </label>
+							     
+							   </div>
+
+							   <div class="item item-input-inset">
+							      <label class="item item-input-wrapper">
+							      <input type="number" placeholder="Amount">
+							      </label>
+							   </div>
+                              <div class="item item-input-inset">
+							    <button class="button button-block button-stable">
+                        Submit </button>
+                             </div>
+							</div>               	               
+		             </div>
+             
+          
+
+                       <div class="item" ng-show="content == 'airtelmoney'">
+		             	 <div class="list">
+							   <div class="item item-input-inset">
+							      <label class="item item-input-wrapper">		
+							      <input type="text" placeholder="Airtel Phonenumber">
+							      </label>
+							     
+							   </div>
+
+							   <div class="item item-input-inset">
+							      <label class="item item-input-wrapper">
+							      <input type="number" placeholder="Amount">
+							      </label>
+							   </div>
+                              <div class="item item-input-inset">
+							    <button class="button button-block button-stable">
+                        Save Details </button>
+                             </div>
+							</div>               	               
+		             </div>
+
+
+
+
+		               <div class="item" ng-show="content == 'bank' ">
+		             	 <div class="list">
+							   <div class="item item-input-inset">
+							      <label class="item item-input-wrapper">		
+							      <input type="text" placeholder="Account Number">
+							      </label>
+							     
+							   </div>
+							   <div class="item item-input-inset">
+							      <label class="item item-input-wrapper">		
+							      <input type="text" placeholder="Bank Name">
+							      </label>
+							     
+							   </div>
+
+							   <div class="item item-input-inset">
+							      <label class="item item-input-wrapper">		
+							      <input type="text" placeholder="Branch">
+							      </label>
+							     
+							   </div>
+
+							   <div class="item item-input-inset">
+							      <label class="item item-input-wrapper">
+							      <input type="number" placeholder="Amount">
+							      </label>
+							   </div>
+                              <div class="item item-input-inset">
+							    <button class="button button-block button-stable">
+                        Save Details </button>
+                             </div>
+							</div>               	               
+		             </div>
+           
+          
+        </div>
+
+
+   </ion-content>

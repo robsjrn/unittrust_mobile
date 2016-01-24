@@ -1,0 +1,31 @@
+<ion-view view-title="Product Interest Rates" >
+<div class="bar bar-header bar-calm-900">
+  <button class="button-clear icon-left ion-arrow-left-a" ng-click="GoBack()"></button>
+  <h1 class="title">List of Products </h1>
+   <a class="button button-clear button-icon icon ion-home" href="#/app"></a>
+</div>
+  <ion-content>
+     <div  ng-repeat="product in productlist">
+           <div class="col">
+
+             <div class="card" ng-click="listProductPrice(product.securityCode,product.fundtype,product.descript)">
+
+             	<div class="item item-avatar">
+				   
+				     <img data-ng-src="data:image/png;base64,{{product.prodimage}}" />
+				     <a ><h2>{{product.abb}}</h2></a>
+				  
+				  </div>			 
+			</div>
+
+		  </div>
+   </div>
+
+		  
+		</div>
+  </ion-content>
+
+  <ion-footer-bar class="bar bar-calm-900">
+   <a class="title padding padding-right" href="#/app/about" > <small>Want to Know More About Unit Trust ? .....</small></a>
+</ion-footer-bar>
+</ion-view>
